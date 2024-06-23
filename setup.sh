@@ -42,6 +42,5 @@ copyConfigs() {
     \cp -rf .hypr ~/.config/hypr
 }
 
-getCurrentFolder
 installDeps
 copyConfigs
