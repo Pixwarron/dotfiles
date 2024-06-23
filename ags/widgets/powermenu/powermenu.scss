@@ -1,0 +1,19 @@
+.powermenu_window {
+    font-size: 64px;
+}
+
+.powermenu_picker {
+    padding: 15px;
+    background: $Base;
+    border-radius: 10px;
+    border: 2px solid $Crust;
+}
+
+.powermenu_item {
+    background: $Button0;
+    margin: 5px;
+}
+
+.powermenu_item:hover {
+    background: $Button1;
+}

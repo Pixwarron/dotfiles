@@ -1,0 +1,18 @@
+.launcher_window {
+    font-size: medium;
+}
+
+.launcher_item {
+    background: transparent;
+}
+
+.launcher_item:hover {
+    background: $Button1;
+}
+
+.launcher_picker {
+    padding: 15px;
+    background: $Base;
+    border-radius: 10px;
+    border: 2px solid $Crust;
+}

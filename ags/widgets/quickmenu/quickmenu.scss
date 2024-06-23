@@ -1,0 +1,32 @@
+.quickmenu_box {
+    margin-top: 15px;
+    margin-right: 15px;
+    padding: 15px;
+    background: $Base;
+    border-radius: 10px;
+    border: 2px solid $Crust;
+}
+
+.sliders_box {
+    background: $Surface0;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.sliders_button {
+    background: $Button0;
+}
+
+.toggle_row {
+    margin-top: 5px;
+}
+
+.toggle_item {
+    background: $Surface0;
+    border-radius: 10px;
+}
+
+.toggle_item_active {
+    background: $Overlay2;
+    border-radius: 10px;
+}
