@@ -1,38 +1,30 @@
-{ ... }: 
-{
+{ ... }: {
   wayland.windowManager.hyprland = {
     settings = {
-        # Monitor Setup
-        monitor = [
-				"desc:Dell Inc. DELL U2715H GH85D7460GRS,2560x1440,0x0,1"
-				"desc:Dell Inc. DELL U2715H GH85D7341PQS,2560x1440,2560x0,1"
-			];
-        # Keyboard Setup
-        input = {
-			"kb_layout" = "de";
-            numlock_by_default = true;
-		};
-        # Keybinds
-        "$mod" = "SUPER";
-		bind =
-		[
-			"$mod, C, killactive"
-			"$mod, G, exec, google-chrome-stable"
-			"$mod, Q, exec, kitty"
-			"$mod, V, togglefloating"
-      "$mod, M, exit"
-		];
-		bindm =
-		[
-		    "$mod, mouse:272, movewindow"
-			"$mod, mouse:273, resizewindow"
-		];
-      
-      # autostart
-      exec-once = [
-        "hyprpaper"
-        "waybar"
+      # Monitor Setup
+      monitor = [
+        "desc:Dell Inc. DELL U2715H GH85D7460GRS,2560x1440,0x0,1"
+        "desc:Dell Inc. DELL U2715H GH85D7341PQS,2560x1440,2560x0,1"
       ];
+      # Keyboard Setup
+      input = {
+        "kb_layout" = "de";
+        numlock_by_default = true;
+      };
+      # Keybinds
+      "$mod" = "SUPER";
+      bind = [
+        "$mod, C, killactive"
+        "$mod, G, exec, google-chrome-stable"
+        "$mod, Q, exec, kitty"
+        "$mod, SPACE, exec, fuzzel"
+        "$mod, V, togglefloating"
+        "$mod, M, exit"
+      ];
+      bindm = [ "$mod, mouse:272, movewindow" "$mod, mouse:273, resizewindow" ];
+
+      # autostart
+      exec-once = [ "hyprpaper" "waybar" ];
 
       general = {
         layout = "dwindle";
@@ -76,7 +68,7 @@
           # size = 4;
           # passes = 2;
           brightness = 1;
-          contrast = 1.400;
+          contrast = 1.4;
           ignore_opacity = true;
           noise = 0;
           new_optimizations = true;
@@ -126,9 +118,7 @@
       ];
 
       # windowrulev2
-      windowrulev2 = [
-        "noblur,class:^()$,title:^()$"
-      ];
+      windowrulev2 = [ "noblur,class:^()$,title:^()$" ];
 
     };
   };

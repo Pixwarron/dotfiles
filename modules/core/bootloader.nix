@@ -8,6 +8,7 @@
   boot.loader.grub.device = "nodev";
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.useOSProber = true;
+  boot.loader.grub.configurationLimit = 10;
 
   boot.loader.grub.catppuccin.enable = true;
   boot.loader.grub.catppuccin.flavor = "mocha";

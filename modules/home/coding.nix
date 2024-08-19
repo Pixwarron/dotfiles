@@ -1,18 +1,38 @@
-{ pkgs, config, inputs, ... }: 
-{
-    programs.gh = {
-        enable = true;
-    };
+{ pkgs, config, inputs, ... }: {
+  home.packages = with pkgs; [ nixfmt ];
+
+  programs.gh = { enable = true; };
 
   programs.vscode = {
     enable = true;
+    enableUpdateCheck = true;
+    enableExtensionUpdateCheck = true;
+
+    userSettings = {
+      "git.enableSmartCommit" = true;
+      "git.confirmSync" = false;
+      "workbench.colorTheme" = "Catppuccin Mocha";
+      "workbench.iconTheme" = "catppuccin-mocha";
+      "explorer.confirmDragAndDrop" = false;
+      "window.menuBarVisibility" = "toggle";
+      "editor.fontFamily" =
+        "'JetBrainsMono Nerd Font', 'SymbolsNerdFont', 'monospace', monospace";
+      "editor.fontVariations" = false;
+      "editor.fontLigatures" = false;
+    };
+    extensions = with pkgs.vscode-extensions; [
+      bbenoist.nix
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons
+      brettm12345.nixfmt-vscode
+    ];
   };
 
   programs.kitty = {
     enable = true;
 
     #theme = "Catppuccin-Mocha";
-    
+
     #font = {
     #  name = "JetBrainsMono Nerd Font";
     #  size = 13;
@@ -20,12 +40,12 @@
 
     settings = {
       confirm_os_window_close = 0;
-      background_opacity = "0.55";  
+      background_opacity = "0.55";
       window_padding_width = 10;
       scrollback_lines = 10000;
       enable_audio_bell = false;
       mouse_hide_wait = 60;
-      
+
       ## Tabs
       tab_title_template = "{index}";
       active_tab_font_style = "normal";
@@ -38,7 +58,7 @@
       inactive_tab_background = "#313244";
     };
 
-    keybindings = {  
+    keybindings = {
       ## Tabs
       "alt+1" = "goto_tab 1";
       "alt+2" = "goto_tab 2";
