@@ -1,5 +1,5 @@
 { inputs, pkgs, ... }: {
-  home.packages = with pkgs; [ hyprpicker hyprpaper ];
+  home.packages = with pkgs; [ hyprpicker hyprpaper hyprlock];
   systemd.user.targets.hyprland-session.Unit.Wants =
     [ "xdg-desktop-autostart.target" ];
   wayland.windowManager.hyprland = {
