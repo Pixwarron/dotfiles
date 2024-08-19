@@ -1,5 +1,5 @@
 {inputs, username, host, ...}: {
 imports =
-  [(import ./filebrowser.nix)]
+  [(import ./basics.nix)]
   ++ [(import ./media.nix)];
 }
