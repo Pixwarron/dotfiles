@@ -14,5 +14,4 @@
     # enableNvidiaPatches = false;
     systemd.enable = true;
   };
-  
 }
