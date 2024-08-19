@@ -24,7 +24,7 @@
       bindm = [ "$mod, mouse:272, movewindow" "$mod, mouse:273, resizewindow" ];
 
       # autostart
-      exec-once = [ "hyprpaper" "waybar" "swaync &" ];
+      exec-once = [ "hyprpaper" "waybar" "swaync &" "hyprlock"];
 
       general = {
         layout = "dwindle";
