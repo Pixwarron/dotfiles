@@ -11,9 +11,9 @@ while [ true ]; do
             random_background=$(ls $directory | shuf -n 1)
         done
 
-        hyprctl hyprpaper unload all
-        hyprctl hyprpaper preload $directory/$random_background
-        hyprctl hyprpaper wallpaper ",$directory/$random_background"
+        hyprctl hyprpaper unload all -q
+        hyprctl hyprpaper preload $directory/$random_background -q
+        hyprctl hyprpaper wallpaper ",$directory/$random_background" -q
 
     fi
     sleep 300
