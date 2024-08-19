@@ -1,9 +1,7 @@
 {inputs, username, host, ...}: {
 imports =
-  [(import ./hyprland)]                      # window manager
-  ++ [(import ./kitty.nix)]
+  [(import ./hyprland)]
   ++ [(import ./theme.nix)]
-  ++ [(import ./code.nix)]                     # terminal
-  ++ [(import ./github.nix)]  
-  ++ [(import ./chrome.nix)];                     # terminal
+  ++ [(import ./coding.nix)]
+  ++ [(import ./chrome.nix)];
 }
