@@ -50,7 +50,7 @@
         layers_hog_keyboard_focus = true;
         animate_manual_resizes = false;
         enable_swallow = true;
-        focus_on_activate = true;
+        #focus_on_activate = true;
       };
 
       dwindle = {
@@ -127,7 +127,7 @@
 
       # windowrulev2
       windowrulev2 = [
-
+        "noblur,class:^()$,title:^()$"
       ];
 
     };

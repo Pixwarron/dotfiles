@@ -9,4 +9,14 @@
     programs.fuzzel = {
         enable = true;
     };
+
+    # System Monitor
+    programs.btop = {
+        enable = true;
+    };
+
+    # System Info
+    programs.fastfetch = {
+        enable = true;
+    };
 }

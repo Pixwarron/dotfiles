@@ -1,6 +1,7 @@
 { ... }:
 {
   home.sessionVariables = {
+    GTK_THEME = "Dracula";
     #NIXOS_OZONE_WL = "1";
     #__GL_GSYNC_ALLOWED = "0";
     #__GL_VRR_ALLOWED = "0";
@@ -23,6 +24,5 @@
     #XDG_SESSION_TYPE = "wayland";
     #SDL_VIDEODRIVER = "wayland";
     #CLUTTER_BACKEND = "wayland";
-    #GTK_THEME = "Dracula";
   };
 }
