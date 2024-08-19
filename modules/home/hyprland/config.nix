@@ -31,6 +31,7 @@
       # autostart
       exec-once = [
         "hyprpaper"
+        "waybar"
       ];
 
       general = {
