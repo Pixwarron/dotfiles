@@ -1,9 +1,8 @@
 { pkgs, config, inputs, ... }: 
 {
-  home.packages = with pkgs;[
-    #vscode
-    gh
-  ];
+    programs.gh = {
+        enable = true;
+    };
 
   programs.vscode = {
     enable = true;
