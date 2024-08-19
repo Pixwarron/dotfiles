@@ -1,14 +1,20 @@
-#!/usr/bin/env bash
-
 directory=~/dotfiles/wallpapers
-monitor=`hyprctl monitors | grep Monitor | awk '{print $2}'`
 
-if [ -d "$directory" ]; then
-    random_background=$(ls $directory | shuf -n 1)
-    echo $directory/$random_background
+while [ true ]; do
+    if [ -d "$directory" ]; then
+        # Get current background and a inital random background
+        current_background=$(hyprctl hyprpaper listloaded)
+        random_background=$(ls $directory | shuf -n 1)
 
-    hyprctl hyprpaper unload all
-    hyprctl hyprpaper preload $directory/$random_background
-    hyprctl hyprpaper wallpaper ",$directory/$random_background"
+        # repeat until random background is not the same as the current one
+        while [ "$directory/$random_background" == "$current_background" ]; do
+            random_background=$(ls $directory | shuf -n 1)
+        done
 
-fi
+        hyprctl hyprpaper unload all
+        hyprctl hyprpaper preload $directory/$random_background
+        hyprctl hyprpaper wallpaper ",$directory/$random_background"
+
+    fi
+    sleep 300
+done

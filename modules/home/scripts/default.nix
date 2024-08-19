@@ -4,4 +4,16 @@ in {
   home.packages = with pkgs; [
     wallpaper-change
   ];
+
+  systemd.user.services.wallpaper-change = {
+    Unit = {
+      Description = "Automatically changes to a random wallpaper in the dotfiles directory";
+    };
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+    Service = {
+      ExecStart = "${wallpaper-change}/bin/wallpaper-change";
+    };
+  };
 }
