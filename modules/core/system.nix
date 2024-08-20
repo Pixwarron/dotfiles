@@ -16,12 +16,11 @@
     };
   };
   # Videocard Setup
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
-  services.xserver.videoDriver = ["amdgpu"];
+  services.xserver.videoDrivers = ["amdgpu"];
 
   #nixpkgs = {
   #  overlays = [
