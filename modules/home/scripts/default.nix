@@ -8,6 +8,7 @@ in {
   systemd.user.services.wallpaper-change = {
     Unit = {
       Description = "Automatically changes to a random wallpaper in the dotfiles directory";
+      After = display-manager.service
     };
     Install = {
       WantedBy = [ "default.target" ];
