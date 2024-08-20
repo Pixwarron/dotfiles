@@ -10,6 +10,8 @@
         };
 
         catppuccin.url = "github:catppuccin/nix";
+
+        swww.url = "github:LGFae/swww";
     };
 
     outputs = { nixpkgs, self, ...} @ inputs:
