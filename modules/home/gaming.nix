@@ -1,6 +1,10 @@
-{ pkgs, config, inputs, ... }: 
+{ pkgs, ... }: 
 {
-  home.packages = with pkgs;[
-    retroarch
-  ];
+  home.packages = (with pkgs; [
+    (retroarch.override {
+      cores = with libretro; [
+        mgba
+      ];
+    })
+  ]);
 }
