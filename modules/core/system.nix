@@ -15,18 +15,6 @@
       options = "--delete-older-than 7d";
     };
   };
-  # Videocard Setup
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-  services.xserver.videoDrivers = ["amdgpu"];
-
-  #nixpkgs = {
-  #  overlays = [
-  #    inputs.nur.overlay
-  #  ];
-  #};
 
   environment.systemPackages = with pkgs; [ wget git ];
 
