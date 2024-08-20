@@ -22,6 +22,11 @@
     { device = "/dev/disk/by-uuid/9112-D174";
       fsType = "vfat";
     };
+  
+  fileSystems."/home/jdeboer/ssd" =
+    { device = "/dev/disk/by-uuid/3c56692f-f48b-4d03-a705-f53586019ead";
+      fsType = "ext4";
+    };
 
   swapDevices =
     [ { device = "/dev/disk/by-uuid/6faff52e-385e-4635-a042-fa64295748fe"; }
