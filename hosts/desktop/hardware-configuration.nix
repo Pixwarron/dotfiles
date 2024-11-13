@@ -27,7 +27,12 @@
     { device = "/dev/disk/by-uuid/3c56692f-f48b-4d03-a705-f53586019ead";
       fsType = "ext4";
     };
-
+  fileSystems."/home/jdeboer/media" =
+    { device = "10.0.0.10:/mnt/Storinator/media";
+      fsType = "nfs";
+      options = [ "x-systemd.automount" "noauto" ];
+    };
+    
   swapDevices =
     [ { device = "/dev/disk/by-uuid/6faff52e-385e-4635-a042-fa64295748fe"; }
     ];

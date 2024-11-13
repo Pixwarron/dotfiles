@@ -1,5 +1,13 @@
 { pkgs, config, inputs, ... }: {
-  home.packages = with pkgs; [ nixfmt ];
+  home.packages = with pkgs; [
+    nixfmt
+    nodejs_22
+    nodePackages."@angular/cli"
+    nodePackages.typescript
+    nodePackages.ts-node
+    nodePackages.nodemon
+    go
+    ];
 
   programs.gh = { enable = true; };
 
@@ -25,6 +33,7 @@
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
       brettm12345.nixfmt-vscode
+      esbenp.prettier-vscode
     ];
   };
 }

@@ -1,10 +1,11 @@
-{ ... }: {
+{ pkgs, ... }: {
   wayland.windowManager.hyprland = {
     settings = {
       # Monitor Setup
       monitor = [
         "desc:Dell Inc. DELL U2715H GH85D7460GRS,2560x1440,0x0,1"
         "desc:Dell Inc. DELL U2715H GH85D7341PQS,2560x1440,2560x0,1"
+        ", preferred, auto, 1"
       ];
       # Keyboard Setup
       input = {
@@ -20,11 +21,12 @@
         "$mod, SPACE, exec, fuzzel"
         "$mod, V, togglefloating"
         "$mod, M, exit"
+        "$mod, E, exec, thunar"
       ];
       bindm = [ "$mod, mouse:272, movewindow" "$mod, mouse:273, resizewindow" ];
 
       # autostart
-      exec-once = [ "swww-daemon" "waybar" "swaync &" "hyprlock"];
+      exec-once = [ "swww-daemon" "waybar" "swaync &" "hyprlock" "wallpaper-change" ];
 
       general = {
         layout = "dwindle";
