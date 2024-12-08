@@ -14,8 +14,4 @@
 
   # System Info
   programs.fastfetch = { enable = true; };
-
-  programs.zsh.shellAliases = {
-    rebuilt = "sudo nixos-rebuild switch --flake ~/dotfiles/#desktop";
-  };
 }

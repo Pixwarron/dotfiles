@@ -1,0 +1,5 @@
+Update the Lock File
+sudo nix flake update
+
+Rebuild the System
+sudo nixos-rebuild switch --flake ~/dotfiles/#desktop
