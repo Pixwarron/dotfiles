@@ -4,5 +4,7 @@
     retroarch-full
     ryujinx
     prismlauncher
+    alvr
+    parsec-bin
   ]);
 }

@@ -26,7 +26,7 @@
       bindm = [ "$mod, mouse:272, movewindow" "$mod, mouse:273, resizewindow" ];
 
       # autostart
-      exec-once = [ "swww-daemon" "waybar" "swaync &" "hyprlock" "wallpaper-change" ];
+      exec-once = [ "swww-daemon" "waybar" "swaync &" "hyprlock" "wallpaper-change" "easyeffects --gapplication-service"];
 
       general = {
         layout = "dwindle";

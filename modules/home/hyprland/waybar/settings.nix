@@ -20,7 +20,7 @@
         "cpu"
         "memory"
         "disk"
-        "pulseaudio" 
+        "pulseaudio"
         "battery"
         "network"
         "custom/notification"
@@ -91,7 +91,8 @@
             default= [" "];
         };
         scroll-step= 5;
-        on-click= "pamixer -t";
+        on-click= "pwvucontrol";
+        on-click-right= "easyeffects";
     };
     battery = {
         format = "{icon} {capacity}%";
